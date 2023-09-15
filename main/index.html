@@ -21,9 +21,20 @@
       <a href="#/vue-app">跳转微应用</a>
     </div>
 
+
+    <button id="act">修改全局状态</button>
+
   </div>
 
   <div id="vapp"></div>
+
+  <script>
+    act.addEventListener('click', () => {
+      globalState.setGlobalState({
+        name: '我是改变后的name'
+      })
+    })
+  </script>
 </body>
 
 </html>

@@ -35,6 +35,10 @@ export async function bootstrap() {
 
 export async function mount(props) {
   console.log('vue app mount', props)
+  props.onGlobalStateChange((curr, prev) => {
+    console.log('更改之后的state', curr)
+    console.log('更改之前的state', prev)
+  })
   render(props)
 }
 
